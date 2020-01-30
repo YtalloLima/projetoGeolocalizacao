@@ -1,6 +1,13 @@
 Geocoder.configure(
-  api_key: "AIzaSyAuroEkadSxAmYCBG3pBMha7nYXZP57TrA",
-  lookup: :google_places_search # for street addresses
+  timeout: 100000,
+  lookup: :nominatim,
+  #lookup: :google,
+  #api_key: "AIzaSyCa8E2nHGO9VBhq46t-2UCImT9Qp3BXgUU",
+  always_raise: :all,
+  units: :km
+  #lookup: :google, # for street addresses
+  #use_https: false,
+  #api_key: "AIzaSyAuroEkadSxAmYCBG3pBMha7nYXZP57TrA"
   # Geocoding options
   # timeout: 3,                 # geocoding service timeout (secs)
   # lookup: :nominatim,         # name of geocoding service (symbol)
@@ -30,3 +37,5 @@ Geocoder.configure(
 #:geoportail_lu, :ban_data_gouv_fr, :test, :latlon, :amap, :osmnames, :baidu_ip, :freegeoip, :geoip2, :maxmind, 
 #:maxmind_local, :telize, :pointpin, :maxmind_geoip2, :ipinfo_io, :ipregistry, :ipapi_com, :ipdata_co, :db_ip_com,
 #:ipstack, :ip2location, :ipgeolocation
+
+#You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started
